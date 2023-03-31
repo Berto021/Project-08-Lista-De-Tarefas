@@ -50,4 +50,57 @@ form input:focus{
 .button:hover{
     background-color: green;
 }
+.input-new-task{
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+}
+.button-add-task{
+    margin-left: 10px;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-add-task:hover{
+    background-color: #1bef1b;
+    border: #1bef1b solid;
+}
+.erase{
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.erase:hover{
+    background-color: #f91d21;
+    border:  #f91d21 solid;
+        
+}
+@media(min-width:350px) and (max-width:650px){
+    .input-new-task{
+        height: 30px;
+        width: 150px;
+        border-radius: 10px;
+    }
+    .button-add-task{
+        margin-left: 10px;
+        height: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button-add-task:hover{
+        background-color: #1bef1b;
+        border: #1bef1b solid;
+    }
+    .erase{
+        margin-left: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .erase:hover{
+        background-color: #f91d21;
+        border:  #f91d21 solid;
+            
+    }
+    
+}
 
