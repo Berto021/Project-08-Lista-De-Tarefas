@@ -14,7 +14,6 @@ inputNewTask.addEventListener('keypress', function(evento){ //aqui eu estou fala
 function saveTasks(){
     const liTasks = tasks.querySelectorAll('li')  
     const listTasks = [];
-
     for(let task of liTasks){
         let taskText = task.innerText.replace('Apagar','').trim() // essa parte eu não entendi muito bem, copiei um pouco do professor, ele ainda não tinha explicado essas coisas, então tá de boas
         listTasks.push(taskText);
@@ -54,10 +53,12 @@ function createTask(textInput) {
    
 }
 function addTaskSaves(){
-    const tasks = localStorage.getItem('tarefas') //,mais uma parte que eu não aprendi ainda, mas é bem maneiro, pois armazena as informações no pc, sendo assim quando usuário colocar as tasks vão ficar salvas e quando voltar pra página novamente estarão do mesmo jeito
+    if(!localStorage.getItem('tarefas')) return;
+    
+    const tasks = localStorage.getItem('tarefas') 
     const listTasks = JSON.parse(tasks)
 
-    for (let task of  listTasks){
+    for (let task of listTasks){
         createTask(task);
     }
 }
@@ -72,6 +73,6 @@ document.addEventListener('click', function(event){ //aqui eu to pegando o event
 
     if (element.classList.contains('erase')){
         element.parentElement.remove()
-    saveTasks()
+        saveTasks()
     }
 })
